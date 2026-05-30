@@ -73,7 +73,6 @@
       inset: 0;
       background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
-    /* decorative tennis-court lines */
     .hero::after {
       content: '';
       position: absolute;
@@ -135,7 +134,6 @@
     }
     .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,124,42,.55); }
 
-    /* hero visual – venn diagram */
     .hero-visual { display: flex; justify-content: center; align-items: center; }
     .venn {
       position: relative;
@@ -295,7 +293,7 @@
     .session-chip .name { font-size: .95rem; color: var(--white); font-weight: 600; }
     .session-chip .desc { font-size: .82rem; color: #8aacc8; margin-top: 4px; line-height: 1.4; }
 
-    /* ─── TESTIMONIAL / QUOTE BAND ─── */
+    /* ─── QUOTE BAND ─── */
     .quote-band {
       background: var(--orange);
       padding: 60px 0;
@@ -374,7 +372,6 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav>
   <div class="container">
     <div class="nav-logo">טניס <span>בגובה העיניים</span></div>
@@ -388,20 +385,13 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container">
     <div class="hero-inner">
       <div>
         <div class="hero-badge">תוכנית שנתית למערכת גפן</div>
-        <h1 class="hero-title">
-          טניס <em>בגובה העיניים</em> –<br>
-          חוסן רגשי ומנהיגות
-        </h1>
-        <p class="hero-subtitle">
-          תוכנית שנתית ייחודית המשלבת מיומנויות טניס עם פיתוח רגשי וחברתי
-          לתלמידי בית-ספר יסודי – גילאי 6–12.
-        </p>
+        <h1 class="hero-title">טניס <em>בגובה העיניים</em> –<br>חוסן רגשי ומנהיגות</h1>
+        <p class="hero-subtitle">תוכנית שנתית ייחודית המשלבת מיומנויות טניס עם פיתוח רגשי וחברתי לתלמידי בית-ספר יסודי – גילאי 6–12.</p>
         <div class="hero-meta">
           <div class="meta-pill">🎾 <strong>30 מפגשים</strong> בשנה</div>
           <div class="meta-pill">👦 גילאי <strong>6–12</strong></div>
@@ -410,7 +400,6 @@
         </div>
         <a href="#contact" class="hero-cta">לפרטים ורישום &larr;</a>
       </div>
-
       <div class="hero-visual">
         <div class="venn">
           <div class="venn-circle venn-left">מיומנויות<br>טניס<br>ומוטוריקה</div>
@@ -422,73 +411,36 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="about" id="about">
   <div class="container">
     <div class="about-grid">
       <div class="about-text">
         <h2 class="section-title">המגרש כיתת לימוד</h2>
-        <p>
-          תוכנית <strong>״טניס בגובה העיניים״</strong> מציבה את מגרש הטניס כסביבת למידה חיה ופועלת.
-          דרך המחבט והכדור, התלמידים מפתחים כלים להתמודדות עם מפסולים, ניהול פחדים, עבודת
-          צוות ועצמאות –  ומחזירים את החוסן לחיי היומיום שלהם.
-        </p>
-        <p>
-          התוכנית בת 30 מפגשים מכוונת לאתגרי הגיל: יחסי חברות, ביטחון עצמי, ויסות רגשי
-          ופיתוח מנהיגות צעירה, תוך שילוב מלא עם תכני לימוד הטניס הפיזי.
-        </p>
-        <blockquote class="quote">
-          "לא רק ללמוד לחבוט – לומדים לנצח במגרש של החיים."
-        </blockquote>
+        <p>תוכנית <strong>״טניס בגובה העיניים״</strong> מציבה את מגרש הטניס כסביבת למידה חיה ופועלת. דרך המחבט והכדור, התלמידים מפתחים כלים להתמודדות עם מפסולים, ניהול פחדים, עבודת צוות ועצמאות – ומחזירים את החוסן לחיי היומיום שלהם.</p>
+        <p>התוכנית בת 30 מפגשים מכוונת לאתגרי הגיל: יחסי חברות, ביטחון עצמי, ויסות רגשי ופיתוח מנהיגות צעירה, תוך שילוב מלא עם תכני לימוד הטניס הפיזי.</p>
+        <blockquote class="quote">"לא רק ללמוד לחבוט – לומדים לנצח במגרש של החיים."</blockquote>
       </div>
       <div>
         <div class="stat-row">
-          <div class="stat-box">
-            <div class="num">30</div>
-            <div class="lbl">מפגשים שנתיים</div>
-          </div>
-          <div class="stat-box">
-            <div class="num">3</div>
-            <div class="lbl">שלישי תוכנית</div>
-          </div>
-          <div class="stat-box">
-            <div class="num">6–12</div>
-            <div class="lbl">גיל היעד</div>
-          </div>
-          <div class="stat-box">
-            <div class="num">2</div>
-            <div class="lbl">מוקדים: רגשי + פיזי</div>
-          </div>
-          <div class="stat-box">
-            <div class="num">🎾</div>
-            <div class="lbl">מגרש = כיתה</div>
-          </div>
-          <div class="stat-box">
-            <div class="num">🏆</div>
-            <div class="lbl">מיני-טורניר בסיום</div>
-          </div>
+          <div class="stat-box"><div class="num">30</div><div class="lbl">מפגשים שנתיים</div></div>
+          <div class="stat-box"><div class="num">3</div><div class="lbl">שלישי תוכנית</div></div>
+          <div class="stat-box"><div class="num">6–12</div><div class="lbl">גיל היעד</div></div>
+          <div class="stat-box"><div class="num">2</div><div class="lbl">מוקדים: רגשי + פיזי</div></div>
+          <div class="stat-box"><div class="num">🎾</div><div class="lbl">מגרש = כיתה</div></div>
+          <div class="stat-box"><div class="num">🏆</div><div class="lbl">מיני-טורניר בסיום</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROGRAM THIRDS -->
 <section class="program" id="program">
   <div class="container">
     <h2 class="section-title">מבנה התוכנית – מסע בן 30 מפגשים</h2>
-    <p class="section-subtitle">
-      התוכנית בנויה כמסע הדרגתי בשלושה שלישים, מפיתוח יסודות אישיים ועד מנהיגות ושחקנות מתקדמת.
-    </p>
+    <p class="section-subtitle">התוכנית בנויה כמסע הדרגתי בשלושה שלישים, מפיתוח יסודות אישיים ועד מנהיגות ושחקנות מתקדמת.</p>
     <div class="thirds-grid">
-
-      <!-- שליש א -->
       <div class="third-card">
-        <div class="third-header t1">
-          <div class="sessions">מפגשים 1–10</div>
-          <h3>שליש ראשון</h3>
-          <div class="tagline">״אני והמחבט שלי״</div>
-        </div>
+        <div class="third-header t1"><div class="sessions">מפגשים 1–10</div><h3>שליש ראשון</h3><div class="tagline">״אני והמחבט שלי״</div></div>
         <div class="third-body">
           <ul>
             <li>היכרות, קואורדינציה ובניית קבוצה</li>
@@ -497,20 +449,11 @@
             <li>פינג-פונג ענק – תנועה ושמאלה</li>
             <li>חגיגת הישגים – מיני-מגרשון ראשון</li>
           </ul>
-          <div class="third-emotion">
-            <strong>מיקוד רגשי:</strong> יצירת שפה קבוצתית חיובית, עמידה בטוחה, הכלת תסכולים.
-            <br><em>״הכדור ברח? הכל טוב, מנסים שוב!״</em>
-          </div>
+          <div class="third-emotion"><strong>מיקוד רגשי:</strong> יצירת שפה קבוצתית חיובית, עמידה בטוחה, הכלת תסכולים.<br><em>״הכדור ברח? הכל טוב, מנסים שוב!״</em></div>
         </div>
       </div>
-
-      <!-- שליש ב -->
       <div class="third-card">
-        <div class="third-header t2">
-          <div class="sessions">מפגשים 11–20</div>
-          <h3>שליש שני</h3>
-          <div class="tagline">״יוצאים מאזור הנוחות״</div>
-        </div>
+        <div class="third-header t2"><div class="sessions">מפגשים 11–20</div><h3>שליש שני</h3><div class="tagline">״יוצאים מאזור הנוחות״</div></div>
         <div class="third-body">
           <ul>
             <li>וולי ברשת – תגובה מהירה ואמיצה</li>
@@ -519,20 +462,11 @@
             <li>משחק זוגות – תיאום וסמיכות</li>
             <li>Fair Play – אתיקה בתוך ומחוץ למגרש</li>
           </ul>
-          <div class="third-emotion">
-            <strong>מיקוד רגשי:</strong> ניהול פחד שמגיע מקרוב, בניית טקסי הרגעה עצמיים, חוויית
-            הצלחה משותפת. <em>״אומץ הוא ניסיון – לא תוצאה.״</em>
-          </div>
+          <div class="third-emotion"><strong>מיקוד רגשי:</strong> ניהול פחד שמגיע מקרוב, בניית טקסי הרגעה עצמיים, חוויית הצלחה משותפת. <em>״אומץ הוא ניסיון – לא תוצאה.״</em></div>
         </div>
       </div>
-
-      <!-- שליש ג -->
       <div class="third-card">
-        <div class="third-header t3">
-          <div class="sessions">מפגשים 21–30</div>
-          <h3>שליש שלישי</h3>
-          <div class="tagline">״משחקים כמו גדולים״</div>
-        </div>
+        <div class="third-header t3"><div class="sessions">מפגשים 21–30</div><h3>שליש שלישי</h3><div class="tagline">״משחקים כמו גדולים״</div></div>
         <div class="third-body">
           <ul>
             <li>הגשה – שחרור ועצירת הכתף ומעלה</li>
@@ -541,201 +475,71 @@
             <li>טקטיקה עם פירגון נקודות</li>
             <li>מיני-טורניר – תחרות אישית וקבוצתית</li>
           </ul>
-          <div class="third-emotion">
-            <strong>מיקוד רגשי:</strong> פיתוח מנהיגות צעירה, טקסי פרגון ומשוב, חגיגת הצלחה
-            משותפת. <em>״הבא הוא חזק יותר.״</em>
-          </div>
+          <div class="third-emotion"><strong>מיקוד רגשי:</strong> פיתוח מנהיגות צעירה, טקסי פרגון ומשוב, חגיגת הצלחה משותפת. <em>״הבא הוא חזק יותר.״</em></div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- METHOD -->
 <section class="method" id="method">
   <div class="container">
     <div class="method-intro">
       <h2 class="section-title">שיטת העבודה – גוף ונפש על אותו מגרש</h2>
-      <p class="section-subtitle">
-        כל מפגש בנוי מדגש פיזי ודגש רגשי–יישומי, כך שכל תנועה על המגרש מחוברת לכלי חיים אמיתי.
-      </p>
+      <p class="section-subtitle">כל מפגש בנוי מדגש פיזי ודגש רגשי–יישומי, כך שכל תנועה על המגרש מחוברת לכלי חיים אמיתי.</p>
     </div>
     <div class="method-grid">
-      <div class="method-card">
-        <div class="method-icon">🎾</div>
-        <div>
-          <h4>פעולה פיזית → דגש רגשי</h4>
-          <p>
-            כל תרגיל טניס (פוראהנד, בקהנד, וולי, הגשה) מחובר לכלי רגשי מוגדר:
-            ביטחון עצמי, ניהול לחץ, עבודת צוות ואחריות.
-          </p>
-        </div>
-      </div>
-      <div class="method-card orange">
-        <div class="method-icon">🧘</div>
-        <div>
-          <h4>אלגוריתם ויסות לחץ</h4>
-          <p>
-            תלמידים לומדים זיהוי לחץ, טקס הרגעה פיזי (2 קפיצות + נשימה עמוקה),
-            ותרגיל פוקוס 5 שניות – לפני כל כדור הבא.
-          </p>
-        </div>
-      </div>
-      <div class="method-card green">
-        <div class="method-icon">🤝</div>
-        <div>
-          <h4>תרגול מאמן צעיר</h4>
-          <p>
-            תלמידים מתחלפים בתפקיד המאמן – מלמדים, מפרגנים ומחזקים חברים,
-            מפתחים אחריות ומנהיגות בגיל הצעיר.
-          </p>
-        </div>
-      </div>
-      <div class="method-card gold">
-        <div class="method-icon">🏆</div>
-        <div>
-          <h4>Fair Play ומדידת הצלחה</h4>
-          <p>
-            בכל טורניר פנימי – נקודות פירגון לצד נקודות טניס. תלמידים לומדים
-            שמשוב חיובי לחבר הוא ניצחון אמיתי בפני עצמו.
-          </p>
-        </div>
-      </div>
+      <div class="method-card"><div class="method-icon">🎾</div><div><h4>פעולה פיזית → דגש רגשי</h4><p>כל תרגיל טניס (פוראהנד, בקהנד, וולי, הגשה) מחובר לכלי רגשי מוגדר: ביטחון עצמי, ניהול לחץ, עבודת צוות ואחריות.</p></div></div>
+      <div class="method-card orange"><div class="method-icon">🧘</div><div><h4>אלגוריתם ויסות לחץ</h4><p>תלמידים לומדים זיהוי לחץ, טקס הרגעה פיזי (2 קפיצות + נשימה עמוקה), ותרגיל פוקוס 5 שניות – לפני כל כדור הבא.</p></div></div>
+      <div class="method-card green"><div class="method-icon">🤝</div><div><h4>תרגול מאמן צעיר</h4><p>תלמידים מתחלפים בתפקיד המאמן – מלמדים, מפרגנים ומחזקים חברים, מפתחים אחריות ומנהיגות בגיל הצעיר.</p></div></div>
+      <div class="method-card gold"><div class="method-icon">🏆</div><div><h4>Fair Play ומדידת הצלחה</h4><p>בכל טורניר פנימי – נקודות פירגון לצד נקודות טניס. תלמידים לומדים שמשוב חיובי לחבר הוא ניצחון אמיתי בפני עצמו.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- SESSIONS SHOWCASE -->
 <section class="showcase" id="sessions">
   <div class="container">
     <h2 class="section-title">מדגם מפגשים מרכזיים</h2>
     <p class="section-subtitle">כל מפגש עצמאי ובנוי להנגשת מיומנות ייחודית – פיזית ורגשית כאחד.</p>
     <div class="sessions-grid">
-      <div class="session-chip">
-        <div class="num">מפגש 1</div>
-        <div class="name">החבר החדש שלי – המחבט</div>
-        <div class="desc">היכרות, בסיסיות, תחושת שליטה ראשונית</div>
-      </div>
-      <div class="session-chip">
-        <div class="num">מפגש 2</div>
-        <div class="name">תיאום עין-יד – ניתור</div>
-        <div class="desc">צעדי קפיצה, ניתור, התאמה לצבע/קול</div>
-      </div>
-      <div class="session-chip">
-        <div class="num">מפגש 3</div>
-        <div class="name">פוראהנד – חבטת כוח גיבורי</div>
-        <div class="desc">סיבוב, הבטה, תנועה נכונה</div>
-      </div>
-      <div class="session-chip">
-        <div class="num">מפגש 5</div>
-        <div class="name">בקהנד – שתי ידיים</div>
-        <div class="desc">אחיזת שתי ידיים לפי גיל, תפני הצידה</div>
-      </div>
-      <div class="session-chip">
-        <div class="num">מפגש 7</div>
-        <div class="name">פינג-פונג ענק!</div>
-        <div class="desc">שילוב חבטות, מטרה – להגיע 5 חזרות ברצף</div>
-      </div>
-      <div class="session-chip">
-        <div class="num">מפגש 9</div>
-        <div class="name">משחקי תגובה וקריאת כדור</div>
-        <div class="desc">חבטה לפי סימנים, צבעים או קולות</div>
-      </div>
-      <div class="session-chip">
-        <div class="num">מפגש 10</div>
-        <div class="name">חגיגת השלי הראשון</div>
-        <div class="desc">מיני-טורניר, מסגרת השקעה וארצינות</div>
-      </div>
-      <div class="session-chip">
-        <div class="num">מפגש 11</div>
-        <div class="name">וולי ברשת</div>
-        <div class="desc">עמידה מוכנה, מחבט גבוה – תגובה מהירה</div>
-      </div>
-      <div class="session-chip">
-        <div class="num">מפגש 12</div>
-        <div class="name">קפיצות קדימה</div>
-        <div class="desc">ריצה קלה קדימה, נסיגה אחורי – אמץ!</div>
-      </div>
-      <div class="session-chip">
-        <div class="num">מפגש 14</div>
-        <div class="name">הגשה – יסודות ההגשה</div>
-        <div class="desc">זריקת כדור, Toss, עמידה נכונה, יציבה</div>
-      </div>
-      <div class="session-chip">
-        <div class="num">מפגש 15</div>
-        <div class="name">הגשה לפי מטרה</div>
-        <div class="desc">חבטה מעל הגשה למינים המסומנים</div>
-      </div>
-      <div class="session-chip">
-        <div class="num">מפגש 17</div>
-        <div class="name">לשחק חכם</div>
-        <div class="desc">עומק וקצב – שפה מצמיחה בין זוגות</div>
-      </div>
-      <div class="session-chip">
-        <div class="num">מפגש 18</div>
-        <div class="name">Fair Play – האתיקה של המגרש</div>
-        <div class="desc">הדילמה: כדור בפנים או בחוץ? שיפוט בהגינות</div>
-      </div>
-      <div class="session-chip">
-        <div class="num">מפגש 21</div>
-        <div class="name">משחקים כמו גדולים</div>
-        <div class="desc">טקטיקה, דחיית סיפוקים, מנהיגות צעירה</div>
-      </div>
-      <div class="session-chip">
-        <div class="num">מפגש 30</div>
-        <div class="name">מיני-טורניר גמר</div>
-        <div class="desc">תחרות, פירגון, חגיגת הצלחה משותפת</div>
-      </div>
+      <div class="session-chip"><div class="num">מפגש 1</div><div class="name">החבר החדש שלי – המחבט</div><div class="desc">היכרות, בסיסיות, תחושת שליטה ראשונית</div></div>
+      <div class="session-chip"><div class="num">מפגש 2</div><div class="name">תיאום עין-יד – ניתור</div><div class="desc">צעדי קפיצה, ניתור, התאמה לצבע/קול</div></div>
+      <div class="session-chip"><div class="num">מפגש 3</div><div class="name">פוראהנד – חבטת כוח גיבורי</div><div class="desc">סיבוב, הבטה, תנועה נכונה</div></div>
+      <div class="session-chip"><div class="num">מפגש 5</div><div class="name">בקהנד – שתי ידיים</div><div class="desc">אחיזת שתי ידיים לפי גיל, תפני הצידה</div></div>
+      <div class="session-chip"><div class="num">מפגש 7</div><div class="name">פינג-פונג ענק!</div><div class="desc">שילוב חבטות, מטרה – להגיע 5 חזרות ברצף</div></div>
+      <div class="session-chip"><div class="num">מפגש 9</div><div class="name">משחקי תגובה וקריאת כדור</div><div class="desc">חבטה לפי סימנים, צבעים או קולות</div></div>
+      <div class="session-chip"><div class="num">מפגש 10</div><div class="name">חגיגת השלי הראשון</div><div class="desc">מיני-טורניר, מסגרת השקעה וארצינות</div></div>
+      <div class="session-chip"><div class="num">מפגש 11</div><div class="name">וולי ברשת</div><div class="desc">עמידה מוכנה, מחבט גבוה – תגובה מהירה</div></div>
+      <div class="session-chip"><div class="num">מפגש 12</div><div class="name">קפיצות קדימה</div><div class="desc">ריצה קלה קדימה, נסיגה אחורי – אמץ!</div></div>
+      <div class="session-chip"><div class="num">מפגש 14</div><div class="name">הגשה – יסודות ההגשה</div><div class="desc">זריקת כדור, Toss, עמידה נכונה, יציבה</div></div>
+      <div class="session-chip"><div class="num">מפגש 15</div><div class="name">הגשה לפי מטרה</div><div class="desc">חבטה מעל הגשה למינים המסומנים</div></div>
+      <div class="session-chip"><div class="num">מפגש 17</div><div class="name">לשחק חכם</div><div class="desc">עומק וקצב – שפה מצמיחה בין זוגות</div></div>
+      <div class="session-chip"><div class="num">מפגש 18</div><div class="name">Fair Play – האתיקה של המגרש</div><div class="desc">הדילמה: כדור בפנים או בחוץ? שיפוט בהגינות</div></div>
+      <div class="session-chip"><div class="num">מפגש 21</div><div class="name">משחקים כמו גדולים</div><div class="desc">טקטיקה, דחיית סיפוקים, מנהיגות צעירה</div></div>
+      <div class="session-chip"><div class="num">מפגש 30</div><div class="name">מיני-טורניר גמר</div><div class="desc">תחרות, פירגון, חגיגת הצלחה משותפת</div></div>
     </div>
   </div>
 </section>
 
-<!-- QUOTE BAND -->
 <div class="quote-band">
   <div class="container">
-    <blockquote>
-      "אנחנו כאן ללמוד, לטעות ולהתקדם."
-    </blockquote>
+    <blockquote>"אנחנו כאן ללמוד, לטעות ולהתקדם."</blockquote>
     <cite>– מסר מנחה לכל ילד בתוכנית</cite>
   </div>
 </div>
 
-<!-- AUDIENCE -->
 <section class="audience" id="audience">
   <div class="container">
     <h2 class="section-title">למי מתאימה התוכנית?</h2>
     <p class="section-subtitle">התוכנית מותאמת לכל ילד – ללא ניסיון קודם בטניס.</p>
     <div class="audience-grid">
-      <div class="audience-card">
-        <div class="icon">🏫</div>
-        <h3>בתי ספר יסודיים</h3>
-        <p>
-          מותאמת למערכת גפן לכיתות א׳–ו׳, מחולקת לפי גיל.
-          30 שעות מפגש שנתיות בתוך שעות הלימוד.
-        </p>
-      </div>
-      <div class="audience-card">
-        <div class="icon">🎾</div>
-        <h3>מתחילים ללא ניסיון</h3>
-        <p>
-          מחבט בידיים לראשונה? מעולה. התוכנית בנויה מאפס
-          ומלווה כל ילד בקצב שלו תוך חיזוק ביטחון עצמי.
-        </p>
-      </div>
-      <div class="audience-card">
-        <div class="icon">💪</div>
-        <h3>ילדים עם אתגרים רגשיים</h3>
-        <p>
-          הכלים הרגשיים שעולים מהמגרש – ויסות לחץ, עמידות,
-          שיתוף פעולה – מועילים במיוחד לילדים עם קשיי ויסות.
-        </p>
-      </div>
+      <div class="audience-card"><div class="icon">🏫</div><h3>בתי ספר יסודיים</h3><p>מותאמת למערכת גפן לכיתות א׳–ו׳, מחולקת לפי גיל. 30 שעות מפגש שנתיות בתוך שעות הלימוד.</p></div>
+      <div class="audience-card"><div class="icon">🎾</div><h3>מתחילים ללא ניסיון</h3><p>מחבט בידיים לראשונה? מעולה. התוכנית בנויה מאפס ומלווה כל ילד בקצב שלו תוך חיזוק ביטחון עצמי.</p></div>
+      <div class="audience-card"><div class="icon">💪</div><h3>ילדים עם אתגרים רגשיים</h3><p>הכלים הרגשיים שעולים מהמגרש – ויסות לחץ, עמידות, שיתוף פעולה – מועילים במיוחד לילדים עם קשיי ויסות.</p></div>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
 <section style="background:#fff;padding:60px 0;text-align:center;">
   <div class="container">
     <div style="display:inline-block;background:linear-gradient(135deg,#0d2240,#1a4a7a);border-radius:20px;padding:40px 60px;box-shadow:0 8px 40px rgba(13,34,64,.18);">
@@ -748,27 +552,18 @@
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta-section" id="contact">
   <div class="container">
     <h2>מוכנים להתחיל את המסע?</h2>
-    <p>
-      לפרטים על הבאת התוכנית לבית-הספר שלכם ותיאום –
-      צרו קשר עם שי בוחניק.
-    </p>
+    <p>לפרטים על הבאת התוכנית לבית-הספר שלכם ותיאום – צרו קשר עם שי בוחניק.</p>
     <a href="mailto:Shaybuh134@gmail.com" class="cta-btn">צרו קשר עכשיו &larr;</a>
     <div class="cta-contact" style="margin-top:28px;display:flex;gap:28px;justify-content:center;flex-wrap:wrap;">
-      <a href="mailto:Shaybuh134@gmail.com" style="color:#e87c2a;text-decoration:none;font-size:1rem;">
-        ✉️ Shaybuh134@gmail.com
-      </a>
-      <a href="tel:0533237120" style="color:#e87c2a;text-decoration:none;font-size:1rem;">
-        📞 053-323-7120
-      </a>
+      <a href="mailto:Shaybuh134@gmail.com" style="color:#e87c2a;text-decoration:none;font-size:1rem;">✉️ Shaybuh134@gmail.com</a>
+      <a href="tel:0533237120" style="color:#e87c2a;text-decoration:none;font-size:1rem;">📞 053-323-7120</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <p>© 2025 <span>טניס בגובה העיניים</span> – תוכנית שנתית של שי בוחניק | כל הזכויות שמורות</p>
