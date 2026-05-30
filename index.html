@@ -153,6 +153,61 @@
     .pillar.p2 { border-right: 4px solid var(--orange); }
     .pillar.p3 { border-right: 4px solid var(--gold); }
 
+    /* ─── PROGRAM TABS ─── */
+    .prog-tabs-bar {
+      background: var(--white);
+      border-bottom: 2px solid #e8edf2;
+      padding: 0;
+      position: sticky;
+      top: 52px;
+      z-index: 90;
+    }
+    .prog-tabs-bar .container { display: flex; gap: 0; }
+    .prog-tab {
+      flex: 1;
+      padding: 18px 12px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #5a7080;
+      border-bottom: 3px solid transparent;
+      transition: color .2s, border-color .2s;
+      background: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      font-family: inherit;
+    }
+    .prog-tab:hover { color: var(--navy); }
+    .prog-tab.active { color: var(--navy); border-bottom-color: var(--orange); }
+    .prog-tab .tab-count {
+      display: inline-block;
+      background: var(--light);
+      color: #5a7080;
+      font-size: .75rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-right: 6px;
+    }
+    .prog-tab.active .tab-count { background: var(--orange); color: #fff; }
+
+    /* sub-tabs for short program */
+    .sub-tabs { display: flex; gap: 12px; justify-content: center; margin-bottom: 36px; }
+    .sub-tab {
+      padding: 10px 28px;
+      border-radius: 8px;
+      border: 2px solid #d0dce8;
+      background: #fff;
+      color: #5a7080;
+      font-weight: 700;
+      font-size: .95rem;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all .2s;
+    }
+    .sub-tab.active { border-color: var(--orange); background: var(--orange); color: #fff; }
+
     /* ─── ABOUT ─── */
     .about { padding: 80px 0; background: var(--white); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
@@ -409,6 +464,20 @@
   </div>
 </section>
 
+<!-- PROGRAM TABS BAR -->
+<div class="prog-tabs-bar">
+  <div class="container">
+    <button class="prog-tab active" onclick="switchProg('annual')">
+      <span class="tab-count">30 מפגשים</span>
+      תוכנית שנתית – חוסן רגשי ומנהיגות
+    </button>
+    <button class="prog-tab" onclick="switchProg('short')">
+      <span class="tab-count">5 / 10 מפגשים</span>
+      תוכנית משולבת ערכים
+    </button>
+  </div>
+</div>
+
 <section class="about" id="about">
   <div class="container">
     <div class="about-grid">
@@ -432,7 +501,8 @@
   </div>
 </section>
 
-<section class="program" id="program">
+<!-- PROGRAM STRUCTURE – annual (30 sessions) -->
+<section class="program" id="prog-annual-section">
   <div class="container">
     <h2 class="section-title">מבנה התוכנית – מסע בן 30 מפגשים</h2>
     <p class="section-subtitle">התוכנית בנויה כמסע הדרגתי בשלושה שלישים, מפיתוח יסודות אישיים ועד מנהיגות ושחקנות מתקדמת.</p>
@@ -480,6 +550,118 @@
   </div>
 </section>
 
+<!-- PROGRAM STRUCTURE – short (5/10 sessions) -->
+<section class="program" id="prog-short-section" style="display:none">
+  <div class="container">
+    <h2 class="section-title">תוכנית טניס משולבת ערכים</h2>
+    <p class="section-subtitle">פיתוח מיומנויות ספורט, כישורי חיים ואקלים בית-ספרי חיובי – בחרו את הסילבוס המתאים לבית-הספר שלכם.</p>
+    <div class="sub-tabs">
+      <button class="sub-tab active" onclick="switchSub('5')">סילבוס 5 מפגשים – יסודות</button>
+      <button class="sub-tab" onclick="switchSub('10')">סילבוס 10 מפגשים – העמקה ומנהיגות</button>
+    </div>
+
+    <!-- 5-session content -->
+    <div id="sub-5">
+      <div class="thirds-grid" style="grid-template-columns:repeat(2,1fr)">
+        <div class="third-card">
+          <div class="third-header t1"><div class="sessions">מפגש 1</div><h3>שליטה וכללים</h3></div>
+          <div class="third-body">
+            <ul>
+              <li>שליטה בסיסית ועמידת מוצא</li>
+              <li>תיאום עין-יד, היכרות, קפיצות</li>
+              <li>תנועה בסיסית במגרש</li>
+            </ul>
+            <div class="third-emotion"><strong>חברתי:</strong> בניית כללי התנהגות קבוצתיים, תרגול משפט חיובי על עצמי.<br><em>״אנחנו כאן ללמוד, לטעות ולהתקדם.״</em></div>
+          </div>
+        </div>
+        <div class="third-card">
+          <div class="third-header t2"><div class="sessions">מפגש 2</div><h3>פוראהנד ופירגון</h3></div>
+          <div class="third-body">
+            <ul>
+              <li>עמידת מוצא פוראהנד ויסודות</li>
+              <li>הפניה בסיס, הפעלה ותרגול דיוק</li>
+              <li>משחק עם ספירה ותרגול תנועה</li>
+            </ul>
+            <div class="third-emotion"><strong>חברתי:</strong> תרגיל מילה טובה לחבר בזמן תרגול.<br><em>״אנחנו מפרגנים בקול – משתפרים בכל.״</em></div>
+          </div>
+        </div>
+        <div class="third-card">
+          <div class="third-header t1"><div class="sessions">מפגש 3</div><h3>בקהנד והדרכה</h3></div>
+          <div class="third-body">
+            <ul>
+              <li>בקהנד לצדדים, תנועה נכונה לצדדים</li>
+              <li>תרגיל מאמן–לומד בין זוגות</li>
+              <li>תרגיל "דיבור פנימי שלילי" – עצירה והחלפה</li>
+            </ul>
+            <div class="third-emotion"><strong>חברתי:</strong> תרגיל מאמן צעיר – ילד אחד מדריך את החבר ואז חילוף.<br><em>״כשאני עוזר לאחר – אני משתפר בעצמי.״</em></div>
+          </div>
+        </div>
+        <div class="third-card">
+          <div class="third-header t2"><div class="sessions">מפגש 4</div><h3>משחק רשת ואומץ</h3></div>
+          <div class="third-body">
+            <ul>
+              <li>וולי בסיסי, כניסה לרשת, תגובה מהירה</li>
+              <li>עבודת זוגות – כל רצף חבטות מסתיים בפירגון לחבר</li>
+            </ul>
+            <div class="third-emotion"><strong>חברתי:</strong> שיחה: מה זה אומץ? תרגיל ״קפיצת אומץ״.<br><em>״אומץ הוא ניסיון – לא תוצאה.״</em></div>
+          </div>
+        </div>
+      </div>
+      <div class="thirds-grid" style="grid-template-columns:1fr;margin-top:24px">
+        <div class="third-card">
+          <div class="third-header t3"><div class="sessions">מפגש 5</div><h3>טורניר מסכם והערכה אישית ⭐ נקודת השיא</h3></div>
+          <div class="third-body">
+            <ul>
+              <li>טורניר קבוצתי, תחנות דיוק, תנועה והערכת יכולות</li>
+              <li>חלוקת תפקידים: שופט, מנהל ניקוד, אחראי ציוד, צלם</li>
+            </ul>
+            <div class="third-emotion"><strong>חברתי:</strong> טקס פירגון אישי ובניית מטרה חברתית למשך הדרך.<br><em>״כל ילד מסיים חזק יותר מכפי שהתחיל.״</em></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10-session content -->
+    <div id="sub-10" style="display:none">
+      <div class="thirds-grid">
+        <div class="third-card">
+          <div class="third-header t1"><div class="sessions">שלב 1 – מפגשים 1–4</div><h3>בסיס קבוצה חזקה</h3></div>
+          <div class="third-body">
+            <ul>
+              <li>מפגשים 1–2: אחיזות, שליטה בכדור, תיאום עין-יד</li>
+              <li>מפגש 3: פוראהנד ותמיכה הדדית בזוגות</li>
+              <li>מפגש 4: בקהנד ואחריות אישית – מסלול חבטה</li>
+            </ul>
+            <div class="third-emotion"><strong>מיקוד חברתי:</strong> ״חוזה קבוצתי״, משחק בחירת מטרה אישית, תרגיל ״דיבור פנימי שלילי״ – עצירה והחלפה.<br><em>״אנחנו קבוצה – כולנו מצליחים.״</em></div>
+          </div>
+        </div>
+        <div class="third-card">
+          <div class="third-header t2"><div class="sessions">שלב 2 – מפגשים 5–7</div><h3>אומץ ושליטה ברגשות</h3></div>
+          <div class="third-body">
+            <ul>
+              <li>מפגש 5: עבודת רגליים וצוות – סולם זריזות</li>
+              <li>מפגש 6: כניסה לרשת ואומץ אישי – וולי בסיסי</li>
+              <li>מפגש 7: הגשה בסיסית – טכניקת זריקת כדור, נשימה לפני הגשה</li>
+            </ul>
+            <div class="third-emotion"><strong>מיקוד חברתי:</strong> תרגיל ״קפיצת אומץ״, שיחה: מה זה אומץ? ניהול פחד.<br><em>״אומץ זה לא לפחד – זה להעיז.״</em></div>
+          </div>
+        </div>
+        <div class="third-card">
+          <div class="third-header t3"><div class="sessions">שלב 3 – מפגשים 8–10</div><h3>טקטיקה, מנהיגות וטקס סיום</h3></div>
+          <div class="third-body">
+            <ul>
+              <li>מפגש 8: החזרת הגשה וריכוז – עמידת מוצא, כדור עם קשת</li>
+              <li>מפגש 9: טקטיקה בסיסית – עומק, כח, ניהול ניקוד</li>
+              <li>מפגש 10: טורניר גדול + טקס מצוינות חברתית</li>
+            </ul>
+            <div class="third-emotion"><strong>מיקוד חברתי:</strong> השחקן המפרגן, השחקן המתמיד, ההתקדמות הגדולה, זוח אישי.<br><em>״גדילה אמיתית היא אומץ של מאמץ, כבוד וחיים טוב.״</em></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="method" id="method">
   <div class="container">
     <div class="method-intro">
@@ -495,7 +677,8 @@
   </div>
 </section>
 
-<section class="showcase" id="sessions">
+<!-- SESSIONS – annual -->
+<section class="showcase" id="sess-annual-section">
   <div class="container">
     <h2 class="section-title">מדגם מפגשים מרכזיים</h2>
     <p class="section-subtitle">כל מפגש עצמאי ובנוי להנגשת מיומנות ייחודית – פיזית ורגשית כאחד.</p>
@@ -515,6 +698,24 @@
       <div class="session-chip"><div class="num">מפגש 18</div><div class="name">Fair Play – האתיקה של המגרש</div><div class="desc">הדילמה: כדור בפנים או בחוץ? שיפוט בהגינות</div></div>
       <div class="session-chip"><div class="num">מפגש 21</div><div class="name">משחקים כמו גדולים</div><div class="desc">טקטיקה, דחיית סיפוקים, מנהיגות צעירה</div></div>
       <div class="session-chip"><div class="num">מפגש 30</div><div class="name">מיני-טורניר גמר</div><div class="desc">תחרות, פירגון, חגיגת הצלחה משותפת</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SESSIONS – short program -->
+<section class="showcase" id="sess-short-section" style="display:none">
+  <div class="container">
+    <h2 class="section-title">מטרות התוכנית המשולבת</h2>
+    <p class="section-subtitle">שני מסלולים להצלחה אחת – מקצועית וחברתית גם יחד.</p>
+    <div class="sessions-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+      <div class="session-chip"><div class="num">מקצועי 🎾</div><div class="name">בניית יסודות טכניים נכונים</div><div class="desc">פיתוח קואורדינציה, אחיזה ויציבות</div></div>
+      <div class="session-chip"><div class="num">מקצועי 🎾</div><div class="name">למידת מכניקת חבטה תקינה</div><div class="desc">פוראהנד, בקהנד, רשת, הגשה, החזרה, טקטיקה</div></div>
+      <div class="session-chip"><div class="num">מקצועי 🎾</div><div class="name">שליטה בכדור במצבים שונים</div><div class="desc">פתיחת קריאת משחק ראשונה</div></div>
+      <div class="session-chip"><div class="num">חברתי 🤝</div><div class="name">כבוד ודיבור חיובי</div><div class="desc">תרגול פירגון לחבר ומשפט חיובי</div></div>
+      <div class="session-chip"><div class="num">חברתי 🤝</div><div class="name">התמדה ואחריות</div><div class="desc">דוגמה אישית ושיתוף פעולה</div></div>
+      <div class="session-chip"><div class="num">חברתי 🤝</div><div class="name">מנהיגות קטנה</div><div class="desc">תפקיד שופט, מנהל ניקוד, אחראי ציוד</div></div>
+      <div class="session-chip"><div class="num">חברתי 🤝</div><div class="name">פתרון קונפליקטים וביטחון עצמי</div><div class="desc">תרגיל ״קפיצת אומץ״ ושיחת מה זה אומץ?</div></div>
+      <div class="session-chip"><div class="num">סיום ⭐</div><div class="name">טורניר מסכם + טקס מצוינות</div><div class="desc">השחקן המפרגן, המתמיד, ההתקדמות הגדולה</div></div>
     </div>
   </div>
 </section>
@@ -568,5 +769,30 @@
   </div>
 </footer>
 
+<script>
+function switchProg(prog) {
+  var annualSections = ['prog-annual-section', 'sess-annual-section'];
+  var shortSections  = ['prog-short-section',  'sess-short-section'];
+  var tabs = document.querySelectorAll('.prog-tab');
+
+  if (prog === 'annual') {
+    annualSections.forEach(function(id){ var el=document.getElementById(id); if(el) el.style.display=''; });
+    shortSections.forEach(function(id){  var el=document.getElementById(id); if(el) el.style.display='none'; });
+    tabs[0].classList.add('active'); tabs[1].classList.remove('active');
+  } else {
+    annualSections.forEach(function(id){ var el=document.getElementById(id); if(el) el.style.display='none'; });
+    shortSections.forEach(function(id){  var el=document.getElementById(id); if(el) el.style.display=''; });
+    tabs[0].classList.remove('active'); tabs[1].classList.add('active');
+  }
+}
+
+function switchSub(n) {
+  document.getElementById('sub-5').style.display  = (n==='5')  ? '' : 'none';
+  document.getElementById('sub-10').style.display = (n==='10') ? '' : 'none';
+  document.querySelectorAll('.sub-tab').forEach(function(btn, i){
+    btn.classList.toggle('active', (i===0 && n==='5') || (i===1 && n==='10'));
+  });
+}
+</script>
 </body>
 </html>
